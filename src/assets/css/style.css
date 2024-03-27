@@ -56,7 +56,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/assets/images/stock-market-wallpaper-background.jpg);
+    background-image: url(/src/assets/images/stock-market-wallpaper-background.jpg);
 }
 
 .taxi .banner .container {
@@ -95,6 +95,10 @@
     background: #80d4ed;
 }
 
+.service h2 {
+    /* font-size: ; */
+}
+
 .service .card-wrapper {
     gap: 2rem;
     transform: translateY(-40%);
@@ -102,7 +106,7 @@
 
 .service .card-wrapper .card {
     min-width: 280px;
-    height: 340px;
+    height: 300px;
     padding: 2rem;
     align-items: center;
     row-gap: 1rem;
