@@ -51,31 +51,9 @@
 }
 
 .taxi .banner {
-    height: 70vh;
-    min-height: 600px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(/src/assets/images/stock-market-wallpaper-background.jpg);
+    height: 80vh;
 }
 
-.taxi .banner .container {
-    z-index: 1;
-}
-
-.taxi .banner img {
-    opacity: 0.85;
-}
-
-.taxi .banner::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    z-index: 0;
-    background: rgba(0, 0, 0, 0.1);
-}
 
 .taxi .contact-whatsapp_icon {
     bottom: 20px;
@@ -90,79 +68,41 @@
 
 
 /* Servies Section Code */
-.service {
-    margin-top: 340px;
-    background: #80d4ed;
+.services-wrapper {
+    background: linear-gradient(-45deg, #ffffff, #23a6d5, #83dfe6);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+.services-wrapper .card{
+    height: 340px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.service h2 {
-    /* font-size: ; */
+.contact-wrapper form {
+    max-width: 600px;
+    margin: auto;
 }
 
-.service .card-wrapper {
-    gap: 2rem;
-    transform: translateY(-40%);
+.risk-analysis  form  label{
+    width: 180px;
 }
 
-.service .card-wrapper .card {
-    min-width: 280px;
-    height: 300px;
-    padding: 2rem;
-    align-items: center;
-    row-gap: 1rem;
-    box-shadow: 0 0 10px grey;
-    flex: 1 0;
+main {
+    min-height: 80vh;
+    background-color: rgb(22, 10, 10);
 }
 
-.service .card-wrapper .card:nth-child(even) {
-    top: -60px;
-}
-
-.service .card-wrapper .card:nth-child(odd) {
-    bottom: -60px;
-}
-
-.service .card-wrapper .card img {
-    height: 100px;
-    object-fit: cover;
-}
-
-.service .card-wrapper .card p,h4 {
-    font-size: var(--font-size-14);
-}
-.service .card-wrapper .card h3 {
-    font-size: var(--font-size-20);
-}
-
-
-@media screen and (max-width: 768px) {
-    .taxi .banner {
-        height: auto;
-        min-height: 360px;
-    }
-    .taxi .banner .container{
-        padding-top: 75px;
-        text-align: center;
-    }
-    .service .card-wrapper .card{
-       min-width: none;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .taxi .banner {
-        min-height: 65vh;
-    }
-    .service .card-wrapper .card{
-        position: static;
-        box-shadow: 0 0 0 grey;
-    }
-    .service {
-        margin-top: 0;
-        background-color: #fff;
-    }
-    
-    .service .card-wrapper {
-        transform: translateY(0);
-    }
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+      }
+    50% {
+      background-position: 100% 50%;
+      }
+    100% {
+      background-position: 0% 50%;
+      }
 }

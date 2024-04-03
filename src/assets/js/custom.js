@@ -13,3 +13,17 @@ window.addEventListener("scroll", event => {
         navbar.classList.remove("navbar--scrolled");
     }
 });
+
+function contactUs(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('contactUsForm');
+    const contactUsform = new FormData(form);
+    const jsonData = {};
+
+    contactUsform.forEach((value, key) => {
+        jsonData[key] = value;
+    });
+    console.log(jsonData);
+
+}
