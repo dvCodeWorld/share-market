@@ -5,104 +5,104 @@
 @import "./reset.css";
 
 .taxi .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9;
-    min-height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  min-height: 60px;
 }
 
 .taxi .navbar .navbar-toggler {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .navbar-toggler .open {
-    display: inline;
+  display: inline;
 }
 
 .navbar-toggler .close {
-    display: none;
+  display: none;
 }
 
 .navbar-toggler.collapsed .open {
-    display: none;
+  display: none;
 }
 
 .navbar-toggler.collapsed .close {
-    display: inline;
+  display: inline;
 }
 
-
 .taxi .navbar-brand h2 {
-    font-size: var(--font-size-24);
-    line-height: 40px;
+  font-size: var(--font-size-24);
+  line-height: 40px;
 }
 
 .taxi .navbar.navbar--scrolled {
-    backdrop-filter: blur(6px);
-    background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.taxi .navbar .navbar-nav .nav-item .nav-link:hover{
-    text-decoration: underline;
-    transition: all 500ms;
-    transform: scale(1.1);
-    line-height: 20px;
+.taxi .navbar .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  transition: all 500ms;
+  transform: scale(1.1);
+  line-height: 20px;
 }
 
 .taxi .banner {
-    height: 80vh;
+  height: 80vh;
 }
 
-
 .taxi .contact-whatsapp_icon {
-    bottom: 20px;
-    right: 20px;
+  bottom: 20px;
+  right: 20px;
 }
 
 .taxi .contact-call_icon {
-    bottom: 66px;
-    right: 20px;
+  bottom: 66px;
+  right: 20px;
 }
-
-
 
 /* Servies Section Code */
 .services-wrapper {
-    background: linear-gradient(-45deg, #ffffff, #23a6d5, #83dfe6);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+  background: linear-gradient(-45deg, #ffffff, #23a6d5, #83dfe6);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
-.services-wrapper .card{
-    height: 340px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.services-wrapper .card {
+  height: 340px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .contact-wrapper form {
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
 }
 
-.risk-analysis  form  label{
-    width: 180px;
+.risk-analysis form label {
+  width: 180px;
 }
 
 main {
-    min-height: 80vh;
-    background-color: rgb(22, 10, 10);
+  min-height: 80vh;
+  background-color: rgb(22, 10, 10);
 }
 
 @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-      }
-    50% {
-      background-position: 100% 50%;
-      }
-    100% {
-      background-position: 0% 50%;
-      }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pricing {
+  padding-top: 100px;
 }
