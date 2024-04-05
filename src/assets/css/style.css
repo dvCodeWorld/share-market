@@ -103,6 +103,139 @@ main {
   }
 }
 
+/* ========================================================================== */
+
 .pricing {
   padding-top: 100px;
+}
+
+.Contact-Details {
+  border: 1px solid;
+}
+
+.Person-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.All-Details div {
+  padding: 16px;
+  text-align: center;
+  padding-left: 190px;
+}
+
+.All-Details input {
+  background-color: #f2f2f2;
+}
+
+.textarea textarea {
+  background-color: #f2f2f2;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+}
+
+address {
+  padding-left: 85px;
+}
+
+.Day-Time {
+  padding-left: 50px;
+}
+
+/* ==================================================================== */
+
+.pricingPage {
+  padding: 40px;
+  margin: 10px;
+}
+
+ol {
+  padding-top: 60px;
+}
+
+h5 {
+  text-align: center;
+}
+
+.Card-Group-1 {
+  margin-top: 60px;
+}
+
+.Card-Group-2 {
+  margin-top: 40px;
+}
+
+.Card-Group-3 {
+  margin-top: 40px;
+  width: 380px;
+}
+
+.card-group .card {
+  border: 1px solid orange;
+  border-top: 5px solid orange;
+  border-radius: 5px !important;
+}
+
+.card-group table tr td {
+  border: none;
+}
+
+/* =================================================== */
+
+.enquiry-page {
+  margin-top: 100px;
+}
+
+.first-section {
+  width: 1150px;
+  margin: auto;
+}
+
+h1,
+p,
+h3 {
+  padding: 10px;
+}
+
+.details {
+  padding: 10px;
+  text-align: center;
+}
+
+input {
+  width: 450px;
+  height: 30px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+select {
+  padding: 10px;
+}
+
+option {
+  width: 400px;
+}
+
+.orange {
+  color: gray;
+  cursor: pointer;
+}
+
+.orange:hover {
+  color: orange;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+}
+
+button.btn-orange {
+  width: 100%;
 }
