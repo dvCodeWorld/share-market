@@ -4,6 +4,12 @@
 @import "./utility.css";
 @import "./reset.css";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .taxi .navbar {
   top: 0;
   left: 0;
@@ -109,67 +115,67 @@ main {
   padding-top: 100px;
 }
 
-.Contact-Details {
-  border: 1px solid;
-}
-
-.Person-details {
+.person-details {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
 }
 
-.All-Details div {
+.all-details > div {
   padding: 16px;
   text-align: center;
   padding-left: 190px;
 }
 
-.All-Details input {
+.all-details input {
   background-color: #f2f2f2;
 }
 
-.textarea textarea {
+.textarea-wrapper textarea {
   background-color: #f2f2f2;
 }
 
-button {
+div .btn-warning button {
   width: 200px;
   height: 40px;
 }
 
-address {
+.address-times address {
   padding-left: 85px;
 }
 
-.Day-Time {
+.day-time {
   padding-left: 50px;
 }
 
 /* ==================================================================== */
 
-.pricingPage {
+.pricing-page {
   padding: 40px;
   margin: 10px;
 }
 
-ol {
+.pricing-page ol {
   padding-top: 60px;
 }
 
-h5 {
+.address h5 {
   text-align: center;
 }
 
-.Card-Group-1 {
+h5.card-title {
+  text-align: center;
+}
+
+.card-group-1 {
   margin-top: 60px;
 }
 
-.Card-Group-2 {
+.card-group-2 {
   margin-top: 40px;
 }
 
-.Card-Group-3 {
+.card-group-3 {
   margin-top: 40px;
   width: 380px;
 }
@@ -195,9 +201,12 @@ h5 {
   margin: auto;
 }
 
-h1,
-p,
-h3 {
+.heading h1,
+p {
+  padding: 10px;
+}
+
+.details h5 {
   padding: 10px;
 }
 
@@ -206,18 +215,18 @@ h3 {
   text-align: center;
 }
 
-input {
+.details input {
   width: 450px;
   height: 30px;
   background-color: #f2f2f2;
   border: none;
 }
 
-select {
+.details select {
   padding: 10px;
 }
 
-option {
+.details select option {
   width: 400px;
 }
 
