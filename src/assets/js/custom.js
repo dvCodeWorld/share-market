@@ -1,12 +1,10 @@
-console.log('Custom JS is Working')
-
 window.addEventListener('load', event => {
     // Set Current year in footer
-    document.getElementById("year").innerText = new Date().getFullYear();;
+    getById("year").innerText = new Date().getFullYear();;
 });
 
 window.addEventListener("scroll", event => {
-    let navbar = document.getElementById("navbar");
+    let navbar = getById("navbar");
     if (window.scrollY >= 75) {
         navbar.classList.add("navbar--scrolled");
     } else {
@@ -14,10 +12,14 @@ window.addEventListener("scroll", event => {
     }
 });
 
+function getById(id) {
+    return document.getElementById(id);
+}
+
 function getFormValue(event, formId) {
     event.preventDefault();
 
-    const form = document.getElementById(formId);
+    const form = getById(formId);
     const formDate = new FormData(form);
     const jsonData = {};
 
@@ -34,22 +36,23 @@ function getFormValue(event, formId) {
 let currentStep = 1;
 
 function changeStep(isStepOne) {
-    document.getElementById(`step-${currentStep}`).classList.remove('active-step');
+    getById(`step-${currentStep}`).classList.remove('active-step');
     isStepOne ? currentStep++ : currentStep--;
-    document.getElementById(`step-${currentStep}`).classList.add('active-step');
+    getById(`step-${currentStep}`).classList.add('active-step');
 }
 
 function submitRiskAnalysisForm(event, formId, isStepOne = true) {
-    const form = document.getElementById(formId);
-    if(form.checkValidity()) {
+    const form = getById(formId);
+    if (form.checkValidity()) {
         getFormValue(event, formId);
         changeStep(isStepOne);
-    } else{
+    } else {
         event.preventDefault();
         event.stopPropagation();
     }
 
-    form.classList.add('was-validated')
+    form.classList.add('was-validated');
+
 }
 
 
@@ -57,13 +60,13 @@ function submitRiskAnalysisForm(event, formId, isStepOne = true) {
 // 
 function isValidPanCardNo(panCardNo) {
     let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
- 
+
     // if PAN Number 
     // is empty return false
     if (panCardNo == null) {
         return "false";
     }
- 
+
     // Return true if the PAN NUMBER
     // matched the ReGex
     if (regex.test(panCardNo) == true) {
@@ -72,4 +75,50 @@ function isValidPanCardNo(panCardNo) {
     else {
         return "false";
     }
+}
+
+function handleFormChange() {
+    // None < 18
+    // Medium - Preferred Service- Stock Cash     SCRORE >= 18 && SCORE >= 22
+    // High - Preferred Service Future, Option, Commodity    SCRORE > 22
+    // Maximum score client can obtain is 77
+
+    const riskForm = getById("riskAnalysisForm2").elements;
+    let riskCount = 0;
+    for (var i = 0; i < riskForm.length; i++) {
+        if (riskForm[i].type === "radio" && riskForm[i].checked && riskForm[i].dataset.id) {
+            riskCount += Number(riskForm[i].dataset.id);
+        }
+    }
+
+    getById("riskScore").value = riskCount;
+    const riskSegmemt = getById("riskSegmemt");
+    console.log(riskCount);
+    if (riskCount !== 0) {
+        var lowRiskWrapper = getById('lowRiskWrapper');
+        var moderateRiskWrapper = getById('moderateRiskWrapper');
+        var highRiskWrapper = getById('highRiskWrapper');
+
+        if (riskCount < 18) {
+            riskSegmemt.value = "None";
+            lowRiskWrapper.innerHTML = lowRiskWrapperContent;
+            moderateRiskWrapper.innerHTML = '';
+            highRiskWrapper.innerHTML = '';
+        } else if (riskCount >= 18 && riskCount <= 22) {
+            riskSegmemt.value = "Medium - Preferred Service- Stock Cash";
+            lowRiskWrapper.innerHTML = '';
+            moderateRiskWrapper.innerHTML = moderateRiskWrapperContent;
+            highRiskWrapper.innerHTML = '';
+        } else {
+            riskSegmemt.value = "High - Preferred Service Future, Option, Commodity";
+            lowRiskWrapper.innerHTML = '';
+            moderateRiskWrapper.innerHTML = moderateRiskWrapperContent;
+            highRiskWrapper.innerHTML = highRiskWrapperContent;
+        }
+    }
+}
+
+function submitSelectServicesForm(event, formId) {
+    getFormValue(event, formId)
+    console.log('submitSelectServicesForm');
 }

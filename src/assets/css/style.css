@@ -43,11 +43,14 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.taxi .navbar .navbar-nav .nav-item .nav-link:hover{
-    text-decoration: underline;
-    transition: all 500ms;
-    transform: scale(1.1);
+.taxi .navbar .navbar-nav .nav-item .nav-link {
+    transition: all 100ms;
     line-height: 20px;
+    cursor: pointer;
+}
+.taxi .navbar .navbar-nav .nav-item .nav-link:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
 .taxi .banner {
@@ -64,7 +67,6 @@
     bottom: 66px;
     right: 20px;
 }
-
 
 
 /* Servies Section Code */
@@ -90,9 +92,13 @@
     width: 180px;
 }
 
-main {
-    min-height: 80vh;
-    background-color: rgb(22, 10, 10);
+.risk-analysis form .question-bottom-border {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(221, 217, 217, 0.5);
+}
+
+.risk-analysis form .question-bottom-border  label{
+    font-size: var(--font-size-14);
 }
 
 .form-step {
