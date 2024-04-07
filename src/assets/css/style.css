@@ -4,102 +4,104 @@
 @import "./utility.css";
 @import "./reset.css";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .taxi .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9;
-    min-height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  min-height: 60px;
 }
 
 .taxi .navbar .navbar-toggler {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .navbar-toggler .open {
-    display: inline;
+  display: inline;
 }
 
 .navbar-toggler .close {
-    display: none;
+  display: none;
 }
 
 .navbar-toggler.collapsed .open {
-    display: none;
+  display: none;
 }
 
 .navbar-toggler.collapsed .close {
-    display: inline;
+  display: inline;
 }
 
-
 .taxi .navbar-brand h2 {
-    font-size: var(--font-size-24);
-    line-height: 40px;
+  font-size: var(--font-size-24);
+  line-height: 40px;
 }
 
 .taxi .navbar.navbar--scrolled {
-    backdrop-filter: blur(6px);
-    background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.taxi .navbar .navbar-nav .nav-item .nav-link:hover{
-    text-decoration: underline;
-    transition: all 500ms;
-    transform: scale(1.1);
-    line-height: 20px;
+.taxi .navbar .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  transition: all 500ms;
+  transform: scale(1.1);
+  line-height: 20px;
 }
 
 .taxi .banner {
-    height: 80vh;
+  height: 80vh;
 }
 
-
 .taxi .contact-whatsapp_icon {
-    bottom: 20px;
-    right: 20px;
+  bottom: 20px;
+  right: 20px;
 }
 
 .taxi .contact-call_icon {
-    bottom: 66px;
-    right: 20px;
+  bottom: 66px;
+  right: 20px;
 }
-
-
 
 /* Servies Section Code */
 .services-wrapper {
-    background: linear-gradient(-45deg, #ffffff, #23a6d5, #83dfe6);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+  background: linear-gradient(-45deg, #ffffff, #23a6d5, #83dfe6);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
-.services-wrapper .card{
-    height: 340px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.services-wrapper .card {
+  height: 340px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .contact-wrapper form {
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
 }
 
-.risk-analysis  form  label.form-label{
-    width: 180px;
+.risk-analysis form label.form-label {
+  width: 180px;
 }
 
 main {
-    min-height: 80vh;
-    background-color: rgb(22, 10, 10);
+  min-height: 80vh;
+  background-color: rgb(22, 10, 10);
 }
 
 .form-step {
-    display: none;
+  display: none;
 }
 .form-step.active-step {
-    display: block;
+  display: block;
 }
 
 /* .was-validated .valid-feedback {
@@ -107,13 +109,151 @@ main {
 } */
 
 @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-      }
-    50% {
-      background-position: 100% 50%;
-      }
-    100% {
-      background-position: 0% 50%;
-      }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========================================================================== */
+
+.pricing {
+  padding-top: 100px;
+}
+
+.person-details {
+  padding: 3rem;
+}
+
+.all-details > div {
+  padding: 16px;
+  text-align: center;
+  padding-left: 190px;
+}
+
+.all-details input {
+  background-color: #f2f2f2;
+}
+
+.textarea-wrapper textarea {
+  background-color: #f2f2f2;
+}
+
+.send-btn button {
+  width: 200px;
+  height: 40px;
+}
+
+.address-times address {
+  padding-left: 85px;
+}
+
+.day-time {
+  padding-left: 50px;
+}
+
+/* ==================================================================== */
+
+.pricing-page {
+  padding: 40px;
+  margin: 10px;
+}
+
+.pricing-page ol {
+  padding-top: 60px;
+}
+
+.address h5 {
+  text-align: center;
+}
+
+h5.card-title {
+  text-align: center;
+}
+
+.card-group-1 {
+  margin-top: 60px;
+}
+
+.card-group-2 {
+  margin-top: 40px;
+}
+
+.card-group-3 {
+  margin-top: 40px;
+  width: 380px;
+}
+
+.card-group .card {
+  border: 1px solid orange;
+  border-top: 5px solid orange;
+  border-radius: 5px !important;
+}
+
+.card-group table tr td {
+  border: none;
+}
+
+/* =================================================== */
+
+.enquiry-page {
+  margin-top: 100px;
+}
+
+.first-section {
+  width: 1150px;
+  margin: auto;
+}
+
+.heading h1,
+p {
+  padding: 10px;
+}
+
+.details h5 {
+  padding: 10px;
+}
+
+.details {
+  padding: 10px;
+  text-align: center;
+}
+
+.details input {
+  width: 450px;
+  height: 30px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.details select {
+  padding: 10px;
+}
+
+.details select option {
+  width: 400px;
+}
+
+.orange {
+  color: gray;
+  cursor: pointer;
+}
+
+.orange:hover {
+  color: orange;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+}
+
+button.btn-orange {
+  width: 100%;
 }
