@@ -131,32 +131,38 @@
                 </p>
               </div>
               <form class="details">
-                <h3>Your Name (required)</h3>
+                <h5>Your Name (required)</h5>
                 <input type="text" />
-                <h3>Your Email (required)</h3>
+                <h5>Your Email (required)</h5>
                 <input type="text" />
-                <h3>Your Mobile(required)</h3>
+                <h5>Your Mobile(required)</h5>
                 <input type="text" />
-                <h3>Services</h3>
+                <h5>Services</h5>
                 <select
                   name="services[]"
                   class="wpcf7-form-control wpcf7-select"
                   aria-invalid="false"
                   multiple="multiple"
+                  fdprocessedid="9oyoxe"
                 >
-                  <option>Capital Vraddhi Equity</option>
-                  <option>Capital Vraddhi Commodity</option>
-                  <option>Capital Vraddhi Agri</option>
+                  <option value="Capital Vraddhi Equity">
+                    Capital Vraddhi Equity
+                  </option>
+                  <option value="Capital Vraddhi Commodity">
+                    Capital Vraddhi Commodity
+                  </option>
+                  <option value="Capital Vraddhi Agri">
+                    Capital Vraddhi Agri
+                  </option>
                 </select>
 
                 <h3>Your Message</h3>
                 <textarea
-                  name=""
+                  name="your-message"
                   cols="40"
                   rows="3"
                   class="wpcf7-form-control wpcf7-textarea"
                   aria-invalid="false"
-                  style="width: 306px; height: 64px"
                   spellcheck="false"
                 ></textarea>
                 <p>
@@ -166,7 +172,11 @@
                   I Agree<br />
                   <input class="checkbox" type="checkbox" />
                 </p>
-                <button type="button" class="btn btn-outline-warning">
+                <button
+                  type="button"
+                  class="btn btn-outline-warning"
+                  style="width: 200px"
+                >
                   SEND
                 </button>
               </form>
