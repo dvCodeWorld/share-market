@@ -127,8 +127,6 @@ main {
 }
 
 .person-details {
-  display: flex;
-  justify-content: space-between;
   padding: 3rem;
 }
 
@@ -146,7 +144,7 @@ main {
   background-color: #f2f2f2;
 }
 
-div .btn-warning button {
+.send-btn button {
   width: 200px;
   height: 40px;
 }
