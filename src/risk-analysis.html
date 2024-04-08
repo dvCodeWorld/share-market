@@ -76,8 +76,8 @@
                                 <div class="d-flex">
                                     <label for="name" class="form-label">Name</label>
                                     <div class="d-flex flex-column w-100">
-                                        <input autocomplete="off" type="text" class="form-control"
-                                            minlength="3" maxlength="50" id="name" name="name" placeholder="Enter your name"
+                                        <input autocomplete="off" type="text" class="form-control" minlength="3"
+                                            maxlength="50" id="name" name="name" placeholder="Enter your name"
                                             required />
                                         <span class="invalid-feedback">Name should be atleast 3 character</span>
                                     </div>
@@ -169,8 +169,8 @@
                     </div>
                 </form>
                 <div class="form-step" id="step-2">
-                <form onsubmit="submitRiskAnalysisForm(event, 'riskAnalysisForm2', false)" onchange="handleFormChange()"
-                    id="riskAnalysisForm2" class="needs-validation" novalidate="">
+                    <form onsubmit="submitRiskAnalysisForm(event, 'riskAnalysisForm2', false)"
+                        onchange="handleFormChange()" id="riskAnalysisForm2" class="needs-validation" novalidate="">
                         <div class="grid gap-4">
                             <!-- Question 1 -->
                             <div class="g-col-lg-4 g-col-12 question-bottom-border">
@@ -910,125 +910,127 @@
                                 </div>
                             </div>
                         </div>
-                </form>
+                    </form>
 
-                <div>
-                    <p>provided forms the basis of our recommendation. It is important to provide accurate and
-                        complete information to ensure that suitable services are recommended according to
-                        investment needs and objectives.</p>
-                    <p class="fw-medium ">As per the SEBI Guidelines, Investment Adviser shall ensure
-                        that-<br />
-                        It has a reasonable basis for believing that a recommendation or transaction entered
-                        into:</p>
+                    <div>
+                        <p>provided forms the basis of our recommendation. It is important to provide accurate and
+                            complete information to ensure that suitable services are recommended according to
+                            investment needs and objectives.</p>
+                        <p class="fw-medium ">As per the SEBI Guidelines, Investment Adviser shall ensure
+                            that-<br />
+                            It has a reasonable basis for believing that a recommendation or transaction entered
+                            into:</p>
 
-                    <ol type="i" role="list">
-                        <li role="listitem"> Meets the client’s investment objectives</li>
-                        <li role="listitem">Is such that the client is able to bear any related investment risks
-                            consistent with its investment objectives and risk tolerance.</li>
-                        <li role="listitem">Is such that the client has the necessary experience and knowledge
-                            to understand the risks involved in the transaction.</li>
-                    </ol>
-                    <p class="mt-3">Based on risk involved in Stock Market, financial profile and investment
-                        experience, clients can be categorized into following categories</p>
+                        <ol type="i" role="list">
+                            <li role="listitem"> Meets the client’s investment objectives</li>
+                            <li role="listitem">Is such that the client is able to bear any related investment risks
+                                consistent with its investment objectives and risk tolerance.</li>
+                            <li role="listitem">Is such that the client has the necessary experience and knowledge
+                                to understand the risks involved in the transaction.</li>
+                        </ol>
+                        <p class="mt-3">Based on risk involved in Stock Market, financial profile and investment
+                            experience, clients can be categorized into following categories</p>
 
-                    <ol type="1" role="list">
-                        <li role="listitem">
-                            <strong>Low risk investor - </strong>
-                            This type of investor has small tolerance for investment risk. Since trading in
-                            stock market is subject to market risk hence none of the services are recommended
-                            for these investors.
-                        </li>
-                        <li role="listitem">
-                            <strong>Moderate risk investor - </strong>
-                            This type of investor is able to accept investment loss occasionally and is willing
-                            to take small risk associated with market. The services recommended to these
-                            investors
-                            are listed below.
-                        </li>
-                        <li role="listitem">
-                            <strong>High risk investor - </strong>
-                            This type of investor is keen for opportunities to generate a high return and is
-                            able to accept substantial risk and can accept quite high investment loss . The
-                            services recommended to these investors are listed below.
-                        </li>
-                    </ol>
-                </div>
-                <div class="mt-5">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Moderate Risk</th>
-                                <th>High Risk</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>STOCK CASH</td>
-                                <td>STOCK FUTURE</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>STOCK OPTION</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>COMMODITY</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="row row-gap-4 mt-5">
-                        <div class="col-12 col-md-6">
-                            <div class="d-flex align-items-center">
-                                <label style="width: 150px" for="riskSegmemt">Risk Segment</label>
-                                <input type="text" class="w-100 form-control  form-control-sm" name="" id="riskSegmemt"
-                                    value="None" readonly disabled />
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="d-flex align-items-center">
-                                <label style="width: 150px" for="riskScore">Scores</label>
-                                <input type="text" class="w-100 form-control  form-control-sm" name="" id="riskScore"
-                                    value="0" readonly disabled />
-                            </div>
-                        </div>
+                        <ol type="1" role="list">
+                            <li role="listitem">
+                                <strong>Low risk investor - </strong>
+                                This type of investor has small tolerance for investment risk. Since trading in
+                                stock market is subject to market risk hence none of the services are recommended
+                                for these investors.
+                            </li>
+                            <li role="listitem">
+                                <strong>Moderate risk investor - </strong>
+                                This type of investor is able to accept investment loss occasionally and is willing
+                                to take small risk associated with market. The services recommended to these
+                                investors
+                                are listed below.
+                            </li>
+                            <li role="listitem">
+                                <strong>High risk investor - </strong>
+                                This type of investor is keen for opportunities to generate a high return and is
+                                able to accept substantial risk and can accept quite high investment loss . The
+                                services recommended to these investors are listed below.
+                            </li>
+                        </ol>
                     </div>
-                    <form onsubmit="submitSelectServicesForm(event, 'selectServicesForm')" id="selectServicesForm">
-                        <div class="row row-cols-1 row-gap-4 mt-5">
-                            <p class="mb-0 fw-medium ">Select:</p>
-                            <!-- For Low Risk -->
-                            <div class="col" id="lowRiskWrapper">
-                                <p class="fw-medium ">Low Risk</p>
-                                <div class="row row-cols-1 row-gap-2">
-                                    <div class="col">
-                                        <label for="lowRisk">
-                                            <input type="radio" class="form-check-input" id="lowRisk" name="lowRisk" value="true">
-                                            <span>No Service can be offered</span>
-                                        </label>
+                    <div class="mt-5">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Moderate Risk</th>
+                                    <th>High Risk</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>STOCK CASH</td>
+                                    <td>STOCK FUTURE</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>STOCK OPTION</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>COMMODITY</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row row-gap-4 mt-5">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <label style="width: 150px" for="riskSegmemt">Risk Segment</label>
+                                    <input type="text" class="w-100 form-control  form-control-sm" name=""
+                                        id="riskSegmemt" value="None" readonly disabled />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <label style="width: 150px" for="riskScore">Scores</label>
+                                    <input type="text" class="w-100 form-control  form-control-sm" name=""
+                                        id="riskScore" value="0" readonly disabled />
+                                </div>
+                            </div>
+                        </div>
+                        <form onsubmit="submitSelectServicesForm(event, 'selectServicesForm')" id="selectServicesForm">
+                            <div class="row row-cols-1 row-gap-4 mt-5">
+                                <p class="mb-0 fw-medium ">Select:</p>
+                                <!-- For Low Risk -->
+                                <div class="col" id="lowRiskWrapper">
+                                    <p class="fw-medium ">Low Risk</p>
+                                    <div class="row row-cols-1 row-gap-2">
+                                        <div class="col">
+                                            <label for="lowRisk">
+                                                <input type="radio" class="form-check-input" id="lowRisk" name="lowRisk"
+                                                    value="true">
+                                                <span>No Service can be offered</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- For Moderate Risk -->
+                                <div class="col" id="moderateRiskWrapper"></div>
+                                <!-- For High Risk -->
+                                <div class="col" id="highRiskWrapper"></div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center column-gap-2">
+                                        <label for="payableAmount" class="label-width fw-medium ">Payable Amount</label>
+                                        <input type="number" placeholder="00"
+                                            class="form-control form-control-sm w-auto" id="payableAmount"
+                                            name="payableAmount">
                                     </div>
                                 </div>
                             </div>
-                            <!-- For Moderate Risk -->
-                            <div class="col" id="moderateRiskWrapper"></div>
-                            <!-- For High Risk -->
-                            <div class="col" id="highRiskWrapper"></div>
-                            <div class="col">
-                                <div class="d-flex align-items-center column-gap-2">
-                                    <label for="payableAmount" class="label-width fw-medium ">Payable Amount</label>
-                                    <input type="number" placeholder="00" class="form-control form-control-sm w-auto"
-                                        id="payableAmount" name="payableAmount">
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="d-flex justify-content-end column-gap-2 mt-5">
-                            <button autocomplete="off" type="button" class="btn btn-secondary mb-3"
-                                onclick="changeStep(false)">Back</button>
-                            <button autocomplete="off" type="submit" class="btn btn-primary mb-3">Submit</button>
-                        </div>
-                    </form>
+                            <div class="d-flex justify-content-end column-gap-2 mt-5">
+                                <button autocomplete="off" type="button" class="btn btn-secondary mb-3"
+                                    onclick="changeStep(false)">Back</button>
+                                <button autocomplete="off" type="submit" class="btn btn-primary mb-3">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
 

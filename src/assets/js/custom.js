@@ -26,7 +26,7 @@ function getFormValue(event, formId) {
     formDate.forEach((value, key) => {
         jsonData[key] = value;
     });
-    console.log("Form Values: ",jsonData);
+    console.log("Form Values: ", jsonData);
     return jsonData;
 }
 
@@ -57,9 +57,9 @@ function submitRiskAnalysisForm(event, formId, isStepOne = true) {
 // 
 function isValidPanCardNo(panCardNo) {
     let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
-    if (panCardNo == null) { return "false";}
-    if (regex.test(panCardNo) == true) { return "true";}
-    else { return "false";}
+    if (panCardNo == null) { return "false"; }
+    if (regex.test(panCardNo) == true) { return "true"; }
+    else { return "false"; }
 }
 
 function handleFormChange() {
@@ -76,9 +76,9 @@ function handleFormChange() {
         if (riskForm[i].type === "radio" && riskForm[i].checked && riskForm[i].dataset.id) {
             count++;
             let name = riskForm[i].name
-            riskCount += Number(riskForm[i].dataset.id); 
+            riskCount += Number(riskForm[i].dataset.id);
             choicesObject[name] = riskForm[i].value;
-        }   
+        }
     }
     riskFormObject.options.score = riskCount;
     riskFormObject.options.choices = choicesObject;
@@ -114,7 +114,7 @@ function handleFormChange() {
 function submitSelectServicesForm(event, formId) {
     riskFormObject.options.businessName = getById("question21").value;
     riskFormObject.selectedServices = getFormValue(event, formId);
-    console.log("riskFormObject",riskFormObject);
+    console.log("riskFormObject", riskFormObject);
 }
 
 function printSection(sectionId) {
