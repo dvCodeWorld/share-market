@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.taxi .navbar {
+.choice-stocks .navbar {
   top: 0;
   left: 0;
   right: 0;
@@ -18,7 +18,7 @@
   min-height: 60px;
 }
 
-.taxi .navbar .navbar-toggler {
+.choice-stocks .navbar .navbar-toggler {
   box-shadow: none;
 }
 
@@ -38,37 +38,37 @@
   display: inline;
 }
 
-.taxi .navbar-brand h2 {
+.choice-stocks .navbar-brand h2 {
   font-size: var(--font-size-24);
   line-height: 40px;
 }
 
-.taxi .navbar.navbar--scrolled {
+.choice-stocks .navbar.navbar--scrolled {
   backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.taxi .navbar .navbar-nav .nav-item .nav-link {
+.choice-stocks .navbar .navbar-nav .nav-item .nav-link {
   transition: all 100ms;
   line-height: 20px;
   cursor: pointer !important;
 }
 
-.taxi .navbar .navbar-nav .nav-item .nav-link:hover {
+.choice-stocks .navbar .navbar-nav .nav-item .nav-link:hover {
   transform: scale(1.1);
   text-decoration: underline;
 }
 
-.taxi .banner {
+.choice-stocks .banner {
   height: 80vh;
 }
 
-.taxi .contact-whatsapp_icon {
+.choice-stocks .contact-whatsapp_icon {
   bottom: 20px;
   right: 20px;
 }
 
-.taxi .contact-call_icon {
+.choice-stocks .contact-call_icon {
   bottom: 66px;
   right: 20px;
 }
@@ -116,6 +116,10 @@
 
 .form-step.active-step {
   display: block;
+}
+
+.payment {
+  min-height: 94vh;
 }
 
 /* .was-validated .valid-feedback {
@@ -213,42 +217,10 @@ h5.card-title {
 
 /* =================================================== */
 
-.enquiry-page {
-  margin-top: 100px;
+.enquiry-page form {
+  max-width: 500px;
 }
 
-.first-section {
-  width: 1150px;
-  margin: auto;
-}
-
-.main-body .first-section .heading h1 {
-  padding: 10px;
-}
-
-.details h5 {
-  padding: 10px;
-}
-
-.details {
-  padding: 10px;
-  text-align: center;
-}
-
-.details input {
-  width: 450px;
-  height: 30px;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-.details select {
-  padding: 10px;
-}
-
-.details select option {
-  width: 400px;
-}
 
 .orange {
   color: gray;
@@ -257,14 +229,4 @@ h5.card-title {
 
 .orange:hover {
   color: orange;
-}
-
-.checkbox {
-  width: 15px;
-  height: 15px;
-  margin: 10px;
-}
-
-button.btn-orange {
-  width: 100%;
 }
