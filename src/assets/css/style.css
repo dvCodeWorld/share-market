@@ -141,27 +141,10 @@
 }
 
 /* ========================================================================== */
+/* CONTACT-US-PAGE */
 
-.pricing {
-  padding-top: 100px;
-}
-
-.person-details {
-  padding: 3rem;
-}
-
-.all-details>div {
-  padding: 16px;
-  text-align: center;
-  padding-left: 190px;
-}
-
-.all-details input {
-  background-color: #f2f2f2;
-}
-
-.textarea-wrapper textarea {
-  background-color: #f2f2f2;
+#formSubmit {
+  max-width: 600px;
 }
 
 .send-btn button {
@@ -169,15 +152,12 @@
   height: 40px;
 }
 
-.address-times address {
-  padding-left: 85px;
-}
-
-.day-time {
-  padding-left: 50px;
-}
-
 /* ==================================================================== */
+/* PRICING-PAGE */
+
+.pricing {
+  padding-top: 100px;
+}
 
 .pricing-page {
   padding: 40px;
@@ -216,6 +196,7 @@ h5.card-title {
 }
 
 /* =================================================== */
+/* ENCURIY-PAGE */
 
 .enquiry-page form {
   max-width: 500px;
