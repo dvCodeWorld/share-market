@@ -26,11 +26,9 @@ function getFormValue(event, formId) {
     formDate.forEach((value, key) => {
         jsonData[key] = value;
     });
-    console.log(jsonData);
+    console.log("Form Values: ",jsonData);
     return jsonData;
 }
-
-
 
 // Risk Analysis Form
 let currentStep = 1;
@@ -44,7 +42,7 @@ function changeStep(isStepOne) {
 function submitRiskAnalysisForm(event, formId, isStepOne = true) {
     const form = getById(formId);
     if (form.checkValidity()) {
-        getFormValue(event, formId);
+        riskFormObject.userInfo = getFormValue(event, formId);
         changeStep(isStepOne);
     } else {
         event.preventDefault();
@@ -52,7 +50,6 @@ function submitRiskAnalysisForm(event, formId, isStepOne = true) {
     }
 
     form.classList.add('was-validated');
-
 }
 
 
@@ -60,21 +57,9 @@ function submitRiskAnalysisForm(event, formId, isStepOne = true) {
 // 
 function isValidPanCardNo(panCardNo) {
     let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
-
-    // if PAN Number 
-    // is empty return false
-    if (panCardNo == null) {
-        return "false";
-    }
-
-    // Return true if the PAN NUMBER
-    // matched the ReGex
-    if (regex.test(panCardNo) == true) {
-        return "true";
-    }
-    else {
-        return "false";
-    }
+    if (panCardNo == null) { return "false";}
+    if (regex.test(panCardNo) == true) { return "true";}
+    else { return "false";}
 }
 
 function handleFormChange() {
@@ -84,16 +69,24 @@ function handleFormChange() {
     // Maximum score client can obtain is 77
 
     const riskForm = getById("riskAnalysisForm2").elements;
+    let count = 0;
     let riskCount = 0;
+    let choicesObject = {};
     for (var i = 0; i < riskForm.length; i++) {
         if (riskForm[i].type === "radio" && riskForm[i].checked && riskForm[i].dataset.id) {
-            riskCount += Number(riskForm[i].dataset.id);
-        }
+            count++;
+            let name = riskForm[i].name
+            riskCount += Number(riskForm[i].dataset.id); 
+            choicesObject[name] = riskForm[i].value;
+        }   
     }
+    riskFormObject.options.score = riskCount;
+    riskFormObject.options.choices = choicesObject;
+    riskFormObject.options.selectedChoiceCount = count;
 
     getById("riskScore").value = riskCount;
     const riskSegmemt = getById("riskSegmemt");
-    console.log(riskCount);
+
     if (riskCount !== 0) {
         var lowRiskWrapper = getById('lowRiskWrapper');
         var moderateRiskWrapper = getById('moderateRiskWrapper');
@@ -119,6 +112,17 @@ function handleFormChange() {
 }
 
 function submitSelectServicesForm(event, formId) {
-    getFormValue(event, formId)
-    console.log('submitSelectServicesForm');
+    riskFormObject.options.businessName = getById("question21").value;
+    riskFormObject.selectedServices = getFormValue(event, formId);
+    console.log("riskFormObject",riskFormObject);
+}
+
+function printSection(sectionId) {
+    const printContents = document.getElementById(sectionId).innerHTML;
+    const originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    // Print the specific div
+    window.print();
+    // Restore original page content
+    document.body.innerHTML = originalContents;
 }

@@ -1,3 +1,37 @@
+window.riskFormObject = {
+    userInfo: null,
+    options: {
+        businessName: null,
+        choices: null,
+        selectedChoiceCount: null,
+        score: null
+    },
+    selectedServices: null
+};
+
+window.riskAnalysisQuestions = ['What is your Age Group?',
+    'What is your occupation?',
+    'Your Current Investment in trading',
+    'Your Preferred Investment Type',
+    'Total Annual Income',
+    'Experience with Equity Investment',
+    'Experience with Commodity Investment',
+    'What is your experience with investment in past',
+    'Investment Goal/Objective',
+    'Total Experience in Market/Investment',
+    'Total Experience in Market/Investment',
+    'Experience in Market Segments',
+    'Size of Emergency Funds',
+    'Percentage of income allocated to payoff Debts',
+    'Status of Accommodation',
+    'No of financially Dependent on you',
+    'Risk tolerance on Investment in terms of losses',
+    'Practice on Saving money',
+    'Experience with Forex Investment',
+    'Are you any of the following, or directly or indirectly related to any of the following',
+    'Name of Business/Firm/Company that you own or work'];
+
+
 // HTML Content which show in #lowRiskWrapper
 window.lowRiskWrapperContent =
     `<p class="fw-medium ">Low Risk</p>

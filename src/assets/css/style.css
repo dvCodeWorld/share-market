@@ -51,7 +51,7 @@
 .taxi .navbar .navbar-nav .nav-item .nav-link {
     transition: all 100ms;
     line-height: 20px;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 .taxi .navbar .navbar-nav .nav-item .nav-link:hover{
     transform: scale(1.1);
@@ -79,7 +79,7 @@
   animation: gradient 10s ease infinite;
 }
 .services-wrapper .card {
-  height: 340px;
+  height: 360px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
@@ -98,6 +98,10 @@
 .risk-analysis form .question-bottom-border {
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(221, 217, 217, 0.5);
+}
+
+.risk-analysis #riskAnalysisForm2 label input[type="radio"]:checked + span {
+  color: #0d6efd;
 }
 
 .risk-analysis form .question-bottom-border  label{
