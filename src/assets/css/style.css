@@ -139,12 +139,6 @@
 /* ========================================================================== */
 /* CONTACT-US-PAGE */
 
-.all-details input {
-  background-color: #f2f2f2;
-}
-.textarea-wrapper textarea {
-  background-color: #f2f2f2;
-}
 #formSubmit {
   max-width: 600px;
 }
