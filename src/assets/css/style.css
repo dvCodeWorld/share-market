@@ -210,8 +210,7 @@ h5.card-title {
   margin: auto;
 }
 
-.heading h1,
-p {
+.main-body .first-section .heading h1 {
   padding: 10px;
 }
 
