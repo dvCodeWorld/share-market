@@ -64,11 +64,13 @@
 }
 
 .choice-stocks .contact-whatsapp_icon {
+  cursor: pointer !important;
   bottom: 20px;
   right: 20px;
 }
 
 .choice-stocks .contact-call_icon {
+  cursor: pointer !important;
   bottom: 66px;
   right: 20px;
 }
